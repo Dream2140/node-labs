@@ -1,0 +1,24 @@
+{
+  "name": "lab03",
+  "version": "1.0.0",
+  "description": "Mongodb, redis",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "author": "Hlib Antonenko",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.7.2",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "joi": "^17.6.0",
+    "mongo": "^0.1.0",
+    "mongoose": "^6.5.2",
+    "morgan": "^1.10.0",
+    "node-fetch": "^2.6.7",
+    "nodemon": "^2.0.19",
+    "redis": "^4.2.0",
+    "uuid": "^8.3.2"
+  }
+}

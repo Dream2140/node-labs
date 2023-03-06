@@ -1,0 +1,12 @@
+{ 
+  "name": "nodejs-lab01",
+  "description": "",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "nodemon -L --inspect=0.0.0.0:9222 src/index.js"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "nodemon": "^2.0.18"
+  }
+}

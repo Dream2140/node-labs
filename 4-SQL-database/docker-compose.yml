@@ -1,0 +1,36 @@
+version: '3'
+
+services:
+  server:
+    build:
+      context: ./node
+    environment:
+      PSQL_HOST: db
+      POSTGRES_PASSWORD: 123
+      POSTGRES_USER: postgres
+      POSTGRES_DB: 4-SQL-database
+    container_name: server-node04
+    image: node
+    ports:
+      - 8080:8080
+    volumes:
+      - ./server:/server
+    working_dir: '/server'
+    depends_on:
+      - db
+    links:
+      - db
+
+  db:
+    build:
+      context: ./postgres
+    environment:
+      POSTGRES_PASSWORD: 123
+      POSTGRES_USER: postgres
+      POSTGRES_DB: 4-SQL-database
+    container_name: postgres-db04
+    image: postgres
+    ports:
+      - 5432:5432
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
